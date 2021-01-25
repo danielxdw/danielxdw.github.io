@@ -13,9 +13,14 @@
 
 <script>
 function loginTokenCallback(var){
-alert('token is '+ var);
+ document.write('token is '+ var);
 }
-window.nativeCB.bridgeGetLoginToken();
+  
+  if(window.nativeCB){
+    window.nativeCB.bridgeGetLoginToken();
+  }else{
+     document.write('no native cb');
+  }
 
 </script>
 </body>
