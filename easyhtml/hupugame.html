@@ -9,26 +9,14 @@
 
 <h1>test hupu game</h1>
   
-<script>
-  
-   function gotowhite(){
-        top.location.href = "huputiyu://webview/openencodeurl?url=https://lite.hupu.com/link/open?game=1&appid=fyqst2&gamesource=gamecenternew";
-    }
 
-  //  setInterval(gotowhite,5);
-  //  setTimeout(getGameToken,3000);
-  
-  getGameToken();
-  
-  function getGameToken(){
-  //alert("get your game token  :" + window.GameJs.getGameToken()); 
-    if(window.GameJs){
-      document.write("get your game token  :" + window.GameJs.getGameToken());
-    }else{
-      document.write("no game js , cookie : " + document.cookie);      
-    }
-  }
- 
+
+<script>
+function loginTokenCallback(var){
+alert('token is '+ var);
+}
+window.nativeCB.bridgeGetLoginToken();
+
 </script>
 </body>
 </html>
